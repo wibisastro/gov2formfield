@@ -7,10 +7,10 @@
 ```
 
 # property 
-- fieldUrl **type: String**
-- action **type String**
-- show **type Boolean**
-- parent_id **type Number**
+- fieldUrl **type: String** //
+- action **type String** //
+- show **type Boolean** //
+- parent_id **type Number** //
 
 # Data
 - isConfirm: false
@@ -25,30 +25,30 @@
 - selected: []
 
 # Methods
-- resetButton
-- scrollTo
-- toggleForm
-- onSubmit
-- responseBox
-- refreshBrowser
-- formSuccess
-- formFail
-- formEdit
-- formConfirmDel
-- formConfirmHasChildren
-- delProceed
-- confirmClose
-- setFields
-- setParentId
-- setLevel
-- listenComponent
-- setField
+- resetButton //
+- scrollTo //
+- toggleForm //
+- onSubmit //
+- responseBox //
+- refreshBrowser //
+- formSuccess //
+- formFail //
+- formEdit //
+- formConfirmDel //
+- formConfirmHasChildren //
+- delProceed //
+- confirmClose //
+- setFields //
+- setParentId //
+- setLevel //
+- listenComponent //
+- setField //
 # created
-- toggleClick
-- formEdit
-- formConfirmDel
-- formConfirmHasChildren
-- setParentId
-- setLevel
-- toggleForm
+- toggleClick //
+- formEdit //
+- formConfirmDel //
+- formConfirmHasChildren //
+- setParentId //
+- setLevel //
+- toggleForm //
 
