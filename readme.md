@@ -6,3 +6,6 @@
    <gov2formfield :action="action"></gov2formfield>
 ```
 
+# property 
+- fieldUrl
+
