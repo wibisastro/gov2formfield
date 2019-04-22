@@ -2,7 +2,7 @@
 
 # Tag
 
-```shell
+```
    <gov2formfield :action="action"></gov2formfield>
 ```
 
