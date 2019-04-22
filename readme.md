@@ -8,5 +8,19 @@
 
 # property 
 - fieldUrl **type: String**
-- action
+- action **type String**
+- show **type Boolean**
+- parent_id **type Number**
+
+# Data
+- isConfirm: false
+- isOpen: false
+- submit: 'Add'
+- fields: []
+- isDel: true
+- isHasChildren: false
+- isDisabled: []
+- form: new Form(this.fields)
+- scrollOptions: { easing: 'ease-in',x: false,y: true }
+- selected: []
 
