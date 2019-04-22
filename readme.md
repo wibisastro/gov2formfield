@@ -7,7 +7,8 @@
 ```
 
 # property 
-- fieldUrl **type: String**
+- fieldUrl 
+-- **type: String**
 - action **type String**
 - show **type Boolean**
 - parent_id **type Number**
