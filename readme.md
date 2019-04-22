@@ -7,6 +7,6 @@
 ```
 
 # property 
-- fieldUrl ## type: String
+- fieldUrl **type: String**
 - action
 
