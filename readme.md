@@ -4,10 +4,10 @@
 <gov2formfield :action=""></gov2formfield>
 ```
 ## Property
-- fieldUrl: **type: String** //
-- action: **type: String** //
-- show: **type: Boolean** //
-- parent_id: **type: Number** //
+- fieldUrl: **type: String** 
+- action: **type: String** 
+- show: **type: Boolean** 
+- parent_id: **type: Number** 
 ## Data
  - isConfirm: false
  - isOpen: false
@@ -25,30 +25,30 @@
    },
  - selected: []
  ## Methods
- - resetButton //
- - scrollTo //
- - toggleForm //
- - onSubmit //
- - responseBox //
- - refreshBrowser //
- - formSuccess //
- - formFail //
- - formEdit //
- - formConfirmDel //
- - formConfirmHasChildren //
- - delProceed //
- - confirmClose //
- - setFields //
- - setParentId //
- - setLevel //
- - listenComponent //
- - setField //
+ - resetButton 
+ - scrollTo 
+ - toggleForm 
+ - onSubmit 
+ - responseBox 
+ - refreshBrowser 
+ - formSuccess 
+ - formFail 
+ - formEdit 
+ - formConfirmDel 
+ - formConfirmHasChildren 
+ - delProceed 
+ - confirmClose 
+ - setFields 
+ - setParentId 
+ - setLevel 
+ - listenComponent 
+ - setField 
  ## Created
- - toggleForm //
- - formEdit //
- - formConfirmDel //
- - formConfirmHasChildren //
- - fieldUrl //
- - setParentId //
- - setLevel //
- - toggleForm //
+ - toggleForm 
+ - formEdit 
+ - formConfirmDel 
+ - formConfirmHasChildren 
+ - fieldUrl 
+ - setParentId 
+ - setLevel 
+ - toggleForm 
