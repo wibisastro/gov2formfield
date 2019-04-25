@@ -10,8 +10,7 @@
     <script src="https://api.kl2.web.id/js/vue.js"></script>
     <script src="https://api.kl2.web.id/js/httpVueLoader.js"></script>
     <script src="https://api.kl2.web.id/js/axios.min.js"></script>
-    <script type="text/javascript" src="js/gov2form.js"></script>
-
+    <script src="js/gov2form.js"></script>
     <script type="text/javascript">
         const eventBus = new Vue();
     </script>
@@ -32,19 +31,29 @@
                 <h1 class="title">Formfield Component</h1>
                 <h2 class="subtitle"></h2>                                
                   <span>&nbsp;</span>
-                  <gov2navbreadcrumb :path-url="pathurl"></gov2navbreadcrumb>          
-            <span>&nbsp;</span>
+                  <!-- <gov2navbreadcrumb :path-url="pathurl"></gov2navbreadcrumb>          
+            <span>&nbsp;</span> -->
             <div>
                 <div class="field is-horizontal">
                   <div class="field-body">
                     <div class="field is-grouped is-grouped-right">
-                        <gov2button button-label="Tambah Data!"></gov2button>
+                        <gov2button button-label="Open Form Add!"></gov2button>
                     </div>
                   </div>
                 </div>
                 <span>&nbsp;</span>
                   <div>
-                    <gov2notification></gov2notification>
+                    <div>
+                        <div class="notification" v-if="isNotif" :class="notifClass">
+                          <button class="delete" @click="isNotif=false"></button>
+                            <p v-text="notifText"></p>
+                        </div>
+                        <gov2session></gov2session>
+                        <b-notification :closable="true" v-if="isLoading">
+                            <b-loading :is-full-page="true" :active.sync="isLoading"></b-loading>
+                            Loading...
+                        </b-notification>
+                    </div>
                   </div>
                 <span>&nbsp;</span>
                 <div>
@@ -77,21 +86,31 @@
 	          'gov2button': httpVueLoader('vue/gov2button.vue'),
             'gov2formfield': httpVueLoader('vue/gov2formfield.vue'),
             'gov2navbreadcrumb': httpVueLoader('vue/gov2navbreadcrumb.vue'),
-            'gov2notification': httpVueLoader('vue/gov2notification.vue'),
 	   },
 	  data () {
         return {
-          "action":"json",
-          "fieldurl":"json\/formfield.json"
+          "action":"gov2formfield",
+          "fieldurl":"json\/formfield.json",
           "defaultLevel":1,
-          "pathurl":"\/components\/gov2nav\/breadcrumb\/components\/gov2formfield\/",
-          "isPressed":false
+          "isPressed":false,
+            isNotif:false,
+            notifClass: '',
+            notifText: '',
+            isLoading: false
         }
     },
     methods: {
-        toggleClick: function(data) {this.isPressed=data;},
+        toggleClick: function(data) {
+          this.isPressed=data;
+        },
+        openNotif: function(data) {
+            this.isNotif=true;
+            this.notifText=data['notification']="Harap Isi Form dengan Lengkap";
+            this.notifClass=data['class']="is-warning";    
+        },
     },
     created: function () {
+        eventBus.$on('openNotif', this.openNotif);
         eventBus.$on("toggleClick", this.toggleClick);
     },
   });
