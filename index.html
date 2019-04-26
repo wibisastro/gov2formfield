@@ -9,6 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
         <script src="https://api.kl2.web.id/js/httpVueLoader.js"></script>
         <script src="https://api.kl2.web.id/js/axios.min.js"></script>
+        <script src="js/gov2form.js"></script>
         <script type="text/javascript">
             const eventBus = new Vue();
         </script>
@@ -46,7 +47,7 @@
                                         <button class="delete" @click="isNotif=false"></button>
                                         <p v-text="notifText"></p>
                                     </div>
-                                    <gov2session></gov2session>
+                                    <!-- <gov2session></gov2session> -->
                                     <b-notification :closable="true" v-if="isLoading">
                                         <b-loading 
                                             :is-full-page="true"
@@ -85,9 +86,9 @@
         new Vue({
             el: '#app',
             components: {
-                'gov2button': httpVueLoader('vue/gov2button.vue'),
+                'gov2button': httpVueLoader('../gov2button/vue/gov2button.vue'),
                 'gov2formfield': httpVueLoader('vue/gov2formfield.vue'),
-                'gov2navbreadcrumb': httpVueLoader('vue/gov2navbreadcrumb.vue'),
+                // 'gov2navbreadcrumb': httpVueLoader('vue/gov2navbreadcrumb.vue'),
             },
             data () {
                 return {
